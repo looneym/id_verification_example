@@ -18,12 +18,6 @@ def index():
     user['email'] = 'id_ver_test@example.com'
     user['name'] = "Guy McMan"
     user['user_hash'] = get_user_hash(user)
-    user['expected_hash'] = '0ee3bac288cda2e889643270dc2403681df2c04d8cbd99eb5bfcb7353b8e820c'
-
-    if user['user_hash'] == user['expected_hash']:
-        print('It worked!')
-    else:
-        print('oh no!')
 
     return render_template('index.html', user=user, app_id=APP_ID)     
 
